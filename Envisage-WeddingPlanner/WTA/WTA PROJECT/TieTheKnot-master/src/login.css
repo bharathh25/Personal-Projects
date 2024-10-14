@@ -1,0 +1,47 @@
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  min-width: 400px;
+  border-radius: 0px 10px 10px 0px;
+}
+.login-pic {
+  height: 300px;
+  border-radius: 10px 0px 0px 10px;
+}
+.login-link {
+  margin: 10px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #4c5c87;
+  font-size: 12px;
+  text-decoration: none;
+}
+.login-button {
+  height: 50px;
+  width: 400px;
+  border: none;
+  background-color: #1d4d4f;
+  color: white;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 15px;
+  border-radius: 10px 10px 10px 10px;
+}
+.input-box {
+  border: none;
+  height: 50px;
+  width: 400px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 15px;
+}

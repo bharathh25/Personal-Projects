@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedder</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">WEDDER</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="vendor.html">vendor</a>
+        <a href="clients.html">clients</a>
+        <a href="team.html">team</a>
+        <a href="contact.html">contact</a>
+        <a href="blog.html">blog</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- vendor section starts  -->
+
+<section class="vendor" id="vendor">
+
+    <div class="heading">
+        <h1>top wedding vendors</h1>
+        <img src="images/header-img.png" alt="">
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/img1.jpg" alt="">
+            <div class="info">
+                <h3>dressing</h3>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/img2.jpg" alt="">
+            <div class="info">
+                <h3>Florist</h3>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/img3.jpg" alt="">
+            <div class="info">
+                <h3>wedding cake</h3>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/img4.jpg" alt="">
+            <div class="info">
+                <h3>venu and hall</h3>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/img5.jpg" alt="">
+            <div class="info">
+                <h3>music and party</h3>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/img6.jpg" alt="">
+            <div class="info">
+                <h3>photographer</h3>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- vendor section ends -->
+
+
+<!-- footer section  -->
+
+<div class="footer"> Copyright &copy; <span>weder.com 2021</span> | all rights reserved! </div>
+
+
+<script> 
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('nav-toggle');
+});
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('nav-toggle');
+}
+
+</script>
+
+
+</body>
+</html>

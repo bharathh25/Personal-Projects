@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedder</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">WEDDER</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="vendor.html">vendor</a>
+        <a href="clients.html">clients</a>
+        <a href="team.html">team</a>
+        <a href="contact.html">contact</a>
+        <a href="blog.html">blog</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- client section starts  -->
+
+<section class="clients" id="clients">
+
+    <div class="heading">
+        <h1>our previous clients</h1>
+        <img src="images/header-img.png" alt="">
+    </div>
+
+    <div class="row">
+
+        <div class="box-container">
+            <div class="box">
+                <img src="images/client-1.jpg" alt="">
+                <div class="info">
+                    <h3>mark & alice</h3>
+                    <p> <i class="fas fa-quote-left"></i> You are the worlds best wedding planner.Thanks for amazing surprises the band, the additional decor it added great charm to our wedding and everyone enjoyed thoroughly. Thanks to your expert suggestions we saved lot more money. All event decor were just amazing it was way beyond expectation…<i class="fas fa-quote-right"></i> </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/client-2.jpg" alt="">
+                <div class="info">
+                    <h3>Nick & Julia</h3>
+                    <p> <i class="fas fa-quote-left"></i> “It looked like something out of a magazine, it was that perfect! We received so many compliments from our friends and family. During the entire event spread over 3 days, we had guests come up to us and tell us that ours was the most beautifully decorated wedding they had ever seen….<i class="fas fa-quote-right"></i> </p>
+                </div>
+            </div>
+        </div>
+
+        <img src="images/divider.png" class="divider" alt="">
+
+        <div class="box-container">
+            <div class="box">
+                <div class="info">
+                    <h3>Joseph & Clue</h3>
+                    <p> <i class="fas fa-quote-left"></i> We wish to thank you sincerely for making our wedding the gorgeous day it turned out to be, despite the bad unpredictable weather! The venue was decorated so lavishly, all thanks to Ruchita who went out of her way to get everything as per our need. You guys are did a great job in all aspects. Our Parents initially were apprehensive that we have hired youngsters to plan our weddings. Later in event everyone including our parents were pleasantly surprised the way you guys planned and executed the whole weddings…..<i class="fas fa-quote-right"></i> </p>
+                </div>
+                <img src="images/client-3.jpg" alt="">
+            </div>
+            <div class="box">
+                <div class="info">
+                    <h3>Jogn & Mary</h3>
+                    <p> <i class="fas fa-quote-left"></i> We couldn’t have done it without you. You totally made us worry free and brought joy to us and our family. You kept us on track in the lead up to the wedding. Ruchita is always on top of the game as she is professional, meticulous and plans ahead of time. Her support was constant. ….<i class="fas fa-quote-right"></i> </p>
+                </div>
+                <img src="images/client-4.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- client section ends -->
+
+
+
+<!-- footer section  -->
+
+<div class="footer"> Copyright &copy; <span>weder.com 2021</span> | all rights reserved! </div>
+
+
+
+
+<script> 
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('nav-toggle');
+});
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('nav-toggle');
+}
+
+</script>
+
+
+</body>
+</html>

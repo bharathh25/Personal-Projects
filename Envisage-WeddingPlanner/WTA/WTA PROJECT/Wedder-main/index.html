@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedder</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-207287673-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-207287673-1');
+</script>
+
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">WEDDER</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="vendor.html">vendor</a>
+        <a href="clients.html">clients</a>
+        <a href="team.html">team</a>
+        <a href="contact.html">contact</a>
+        <a href="blog.html">blog</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <span>wedding planner agency</span>
+        <h3>we make every moment special!</h3>
+        <a href="#" class="btn">learn more</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<section class="step-container">
+
+    <div class="step">
+        <span>01</span>
+        <h3>Venue Booking</h3>
+        <p>Wedder plans over 40 weddings in year. This avail us to get discounted rates from venues which are not available to you. Get benefits of our hotel tie-up. Post your requirements now.</p>
+        <a href="#" class="btn">learn more</a>
+    </div>
+
+    <div class="step">
+        <span>02</span>
+        <h3>Complete Wedding Planning</h3>
+        <p>Our Full Service Wedding Planning includes every aspect of planning your wedding. No detail is left undone, as our team will be there for you in every step of the way</p>
+        <a href="#" class="btn">learn more</a>
+    </div>
+
+    <div class="step">
+        <span>03</span>
+        <h3>wedding ceremony</h3>
+        <p>Our partial planning services is perfect for those couples who have already started their wedding planning process and need professional guidance regarding some elements of their wedding like decor designing or planning a theme.</p>
+        <a href="#" class="btn">learn more</a>
+    </div>
+
+</section>
+
+
+<!-- footer section  -->
+
+<div class="footer"> Copyright &copy; <span>weder.com 2021</span> | all rights reserved! </div>
+
+
+<script> 
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('nav-toggle');
+});
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('nav-toggle');
+}
+
+</script>
+
+
+</body>
+</html>

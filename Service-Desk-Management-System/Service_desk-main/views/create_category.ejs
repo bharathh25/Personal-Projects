@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                var x = document.forms["myform"]["cat_name"].value;
+                var y = document.forms["myform"]["cat_desc"].value;
+                if (x == "" || y == "") {
+                    alert("Please check the details entered");
+                    return false;
+                }
+            }
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <title></title>
+        <style>
+            body{
+                background-image: url("../images/back.jpg");
+                background-repeat: no-repeat;
+                background-size: 1400px 650px;
+            }
+        </style>
+    </head>
+    <body>
+        <h4 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;color: rgb(0, 0, 0);position: absolute; top: 15px; left: 40px"> <%= fullName %></h4>
+        <div class="main container" style="color: rgb(32, 28, 28);">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="display-4 m-b-2 admin_h1">Create Category</h1>
+                    <% if(err) {%>
+                        <script>alert("Please check the details entered");</script>
+                    <% } %>
+                    <form name = "myform" onsubmit="return validateForm()" method="POST" action="/create_category">
+                        <div class="col-half">
+                            <div class="form-group">  
+                                <div class="row">
+                                    <div class="wrapper">
+                                        <label for="name">CATEGORY NAME</label>
+                                        <input id="name" type="text" placeholder="category" name="cat_name" class="form-control">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper">
+                                        <label for="descr">DESCRIPTION</label>
+                                        <input id="descr" type="text"   placeholder="description" name="cat_desc" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <br><br>
+                            <button class="btn btn-secondary btn-right" type="reset">CLEAR</button>
+                            <button class="btn btn-primary btn-right" type="submit">Submit</button>
+                        </div>                        
+                    </form>
+                </div>
+            </div>   
+        </div> 
+        <a href="/administrator" class="topright2">HOME</a>
+        <a href="/" class="topright">LOGOUT</a> 
+    </body>
+</html>

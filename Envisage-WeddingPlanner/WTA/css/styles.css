@@ -1,0 +1,258 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: lato;
+     
+  }
+
+  /* header{
+    background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url('/home/fanny/Documents/weddingHalls/image/4.jpg');
+    height:80vh;
+    width:100%;
+    background-size:cover;
+    background-position: center;
+    text-align:center;
+    font-size:30px;
+  } */
+
+  h1{
+    font-style: Snell Roundhand;
+    margin: auto;
+    color: #000;
+    width: 100%;
+     text-size-adjust: auto;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 10px;
+    padding-bottom: 0%;
+    outline: #fff;
+    -webkit-filter: drop-shadow(5px 5px 3px grey);
+    -moz-filter: drop-shadow(5px 5px 3px grey);
+     }
+
+.button{
+  position:absolute;
+ top:60%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ margin-right: 5%;
+}
+#button{
+    position:absolute;
+   top:100%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   margin-right: 5%;
+  }
+.active{
+ border:1px solid #fff;
+ padding:10px 20px;
+ color:palevioletred;
+ text-decoration:none;
+ transition:0.6s ease;
+ background-color:white;
+}
+.active:hover{
+ background-color:white; 
+ color:black;
+}
+.logo{
+    font-size:5px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.main ul {
+  text-align:right;
+  margin-right:5%;
+
+  /* background-color:black; */
+ 
+}
+.main ul li
+{
+  display:inline-block;
+  padding:10px;
+  
+}
+.main ul li a{
+  text-decoration:none;
+  color:#023020;
+  padding:10px 20px;
+  border:1px solid transparent;
+  transition:0.6s ease;
+ font-size:20px;
+ font-family: comic sans ms header;
+ position:relative;
+}
+.main ul li a:hover{
+  /* background-color:white; */
+  color:wheat;
+}
+/* .actives{
+  background-color:black;
+  color:white;
+} */
+.menu h2{
+    font-size: 20px;
+    color:white;
+}
+.menu ol{
+    text-decoration: none;
+}
+.menu ol li{
+    
+    color:white;
+    font-size: 20px;
+}
+h3{
+    margin-left:5%;
+}
+.button1{
+margin-top:5%;
+margin-left:5%;
+    }
+.one{
+background-color: rgb(245, 222, 225);
+margin-top: 3%;
+display:flex;
+margin: 50px auto 0;
+    }
+ 
+    /* h1{
+        margin-top:3%;
+        color:black;
+        font-family: monospace;
+        text-align : center;
+        font-size: 40px;
+    }
+    p{
+        margin-top:1%;
+        color:black;
+        font-family: monospace;
+        text-align: center;
+        font-size: 20px;
+    } */
+    
+    .col-md-6 > p{
+        margin-top:1%;
+        /* margin-left: 5%;
+        margin-right: 5%; */
+        color:black;
+        font-family: monospace;
+        font-size: 15px;
+       
+    
+    }
+    h2{
+        text-align: center;
+    }
+    .row{
+        margin:10px 0; 
+    }
+    .col-md-6{
+        width:600px;
+        display: flex;
+        justify-content: space-around;
+
+    }
+     /* Make the image fully responsive */
+  /* .carousel-inner img {
+    width: 100%;
+    height: 500px;
+   
+} */
+.main .pictures{
+  background-image: url("../image/2.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:540px;
+  margin-left:2px;
+  animation: slide 8s infinite;
+}
+@keyframes slide{
+  40%{
+      background: url("../image/1.jpg");
+      background-size:cover;
+      background-repeat:no-repeat;
+      height:540px;
+      margin-left:2px;
+      
+      
+  }
+  25%{
+      background: url("../image/3.jpg");
+      background-size:cover;
+      background-repeat:no-repeat;
+      height:540px;
+      margin-left:2px;
+     
+}
+}
+.main .title{
+  padding-top: 300px;
+  text-align: center;
+}
+.main .title h1{
+    
+    font-family: lato;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    
+}
+.main #about{
+  text-align: center;
+}
+.main #about h1{
+  font-family: lato;
+  font-size: 60px;
+  font-weight: bolder;
+  color:#023020;
+}
+.main #about p{
+  font-family: lato;
+  color: rgba(0,0,0,0.5);
+}
+.main #gallery{
+  text-align: center;
+}
+.main #gallery h1{
+  font-family: lato;
+  font-size: 60px;
+  font-weight: bolder;
+  color:#023020;
+}
+.main #gallery p{
+  font-family: lato;
+  color: rgba(0,0,0,0.5);
+}
+.main .row .gallerytext{
+  margin-left: 60px;
+}
+.main .row img{
+  margin-left: 25px;
+  padding-right: 30px;
+}
+.main .row .gallerytext h4{
+  font-family: lato;
+  color: #023020;
+  font-weight: 100;
+}
+.main .row .gallerytext p{
+  font-family: lato;
+  color:#023020;
+  font-weight: 100;
+}
+.main .row .gallerytext a{
+  font-family: lato;
+  background-color:#023020;
+  font-weight: bold;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}

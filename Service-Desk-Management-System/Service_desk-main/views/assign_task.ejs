@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                var x = document.forms["myform"]["task"].value;
+                var y = document.forms["myform"]["to_id"].value;
+                //var z = document.forms["myform"]["task_name"].value;
+                //var a = document.forms["myform"]["task_desc"].value;
+                //var b = document.forms["myform"]["start_date"].value;
+                //var c = document.forms["myform"]["end_date"].value;
+                if (x == ""|| y == "") { //|| z == "" || a == "" || b == "" || c == "") {
+                    alert("Please check the details entered");
+                    return false;
+                }
+            }
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <style type="text/css"> 
+           body{
+            background-image: url("../images/background1.jpg");
+            background-repeat: no-repeat;
+            background-size: 1700px 650px;
+           }
+           h1{
+            color: #00040a;
+           }
+         </style>
+    </head>
+
+    <body>
+        <h4 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;color: rgb(0, 0, 0);position: absolute; top: 15px; left: 40px">  <%= fullName %></h4>
+        <div class="main container4" style="color: rgb(0, 0, 0);">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="display-7 m-b-1;">TASK ASSIGNMENT</h1>
+                    <% if(err) {%>
+                        <script>
+                            alert("Please check the details entered"); 
+                        </script>
+                        
+                    <% } %>
+                    
+                    <form name = "myform" onsubmit="return validateForm()" method="POST" action="/assign_task">
+                        <div class="col-half">
+                             <div class="form-group">
+                                    <div class="row">
+                                        <div class="wrapper1">
+                                            <label for="task_assign">TASK</label><br>
+
+                                            <select name="task" id="task" class="form-control">
+                                                <option value = "">-----------</option>
+                                                <% for(var i=0; i<tasks .length; i++) {%>
+                                                    <option value="<%= tasks[i].taskId_Task %>"><%=tasks[i].taskName_Task %></option>
+                                                <% } %>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="wrapper1">
+                                            <label for="to_id">TO</label><br>
+                                            <select name="to_id" id="to_id" class="form-control">
+                                                <option value = "">-----------</option>
+                                                <% for(var i=0; i<to_users.length; i++) {%>
+                                                    <option value="<%= to_users[i].usersId_Users %>"><%= to_users[i].usersName_Users %></option>
+                                                <% } %>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+      
+
+                           
+
+                            <br><br>
+                            <button class="btn btn-secondary btn-right" type="reset">Clear</button>
+                            <button class="btn btn-primary btn-right" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>   
+        </div> 
+        <a href="./cat_admin"  class="topright2" style="color: rgb(16, 98, 252);">HOME</a>
+        <a href="/" class="topright" style="color: rgb(16, 98, 252);">LOGOUT</a> 
+    </body>
+</html>

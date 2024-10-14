@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style type="text/css">
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            background-color: #30039b;
+            text-emphasis-color: #dddddd;
+            color: #dddddd;
+        }
+        
+
+        tr:nth-child(odd) {
+            background-color: #bbe2fa !important;
+        }
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        body{
+            background-image: url("../images/back.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+
+    </style>    
+</head>
+<body>
+    <h4 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;color: rgb(5, 5, 5);position: absolute; top: 15px; left: 40px">  <%= fullName %></h4>
+    <div class="main">
+        <% if(statuses.length > 0)
+        {%>
+            <table>
+                <tr>
+                    <th>Status Id</th>
+                    <th>Status Name</th>
+                    <th>status Desc</th>
+                </tr>
+                <%
+                for(var i=0;i<statuses.length; i++)
+                {
+                %>
+                    <tr>
+                        <td><%= statuses[i].statusId_TaskStatus %></td>
+                        <td><%= statuses[i].statusName_TaskStatus %></td>
+                        <td><%= statuses[i].statusDesc_TaskStatus %></td>
+                    </tr>            
+                <%}
+            }%>
+        </table>      
+    </div>  
+    <div class="row">
+        <a href="./administrator" class="topright2">HOME</a>
+        <a href="/" class="topright">LOGOUT</a>
+</div>   
+</body>

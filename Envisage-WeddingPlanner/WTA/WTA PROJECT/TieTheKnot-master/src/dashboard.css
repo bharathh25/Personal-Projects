@@ -1,0 +1,48 @@
+.container-dashboard {
+  background-color: #1d4d4f;
+  color: white;
+  height: 125px;
+}
+
+.dashboard-right {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.logo-icon {
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+}
+logo-image {
+  max-width: 250px;
+}
+.name {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: xx-large;
+  color: white;
+  position: relative;
+  left: -10px;
+}
+
+.dashboard-link {
+  display: flex;
+  margin: 10px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+.dashboard-btn-logout {
+  background-color: #1d4d4f;
+  border: none;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 16px;
+  text-decoration: none;
+}

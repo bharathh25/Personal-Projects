@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           function validateForm() {
+                var a = document.forms["myform"]["category"].value;
+                var b = document.forms["myform"]["u_name"].value;
+                var c = document.forms["myform"]["full_name"].value;
+                var d = document.forms["myform"]["passwd"].value;
+                var e = document.forms["myform"]["addr"].value;
+                var f = document.forms["myform"]["mob"].value;
+                var g = document.forms["myform"]["email"].value;
+                if (a == "" || b == "" || c == "" || d == "" || e == "" || f == "" || g == "") {
+                    alert("Please check the details entered");
+                    return false;
+                }
+            }
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <title></title>
+        <style>
+         
+        body{
+            background-color:rgb(131, 197, 255);
+            background-size: 1600px 750px;
+        }  
+        </style>
+    </head>
+    <body>
+        <h4 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;color: #000000;position: absolute; top: 15px; left: 40px">  <%= fullName %></h4>
+        <img src="../images/user.png" alt="user" width="200" height="200" style="position: absolute; top: 30px; left: 600px; right: 500px">
+        <div class="main1 container2" style="color: rgb(0, 0, 0);">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="display-4 m-b-2 admin_h1">Create User</h1>
+                    <% if(err) {%>
+                        <script>alert("Please check the details entered");</script>
+                    <% } %>
+                    <form name = "myform" onsubmit="return validateForm()" method="POST" action="/create_user">
+                        <div class="col-half">
+                            <div class="form-group">  
+                                <div class="row">
+                                    <div class="wrapper2">
+                                            <label for="u_name">USER NAME</label>
+                                            <input id="u_name" type="text" placeholder="username" name="u_name" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">  
+                                    <div class="row">
+                                        <div class="wrapper2">
+                                            <label for="full_name">FULL NAME</label>
+                                            <input id="full_name" type="text" placeholder="fullname" name="full_name" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="wrapper2">
+                                            <label for="pw">PASSWORD</label>
+                                            <input id="pw" type="password"   placeholder="password" name="passwd" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper2">
+                                        <label for="addr">PLACE</label>
+                                        <input id="addr" type="text" placeholder="address" name="addr" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-half">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper2">
+                                        <label for="mob">MOBILE NUMBER</label>
+                                        <input id="mob"  type="text" placeholder="Mobile Number" name="mob" class="form-control" maxlength="10">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper2">
+                                        <label for="emailid">EMAIL ID</label>
+                                        <input id="emailid" type="email" placeholder="Email Id" name="email" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper2">
+                                        <label for="cat_name">CAT NAME</label><br>
+                                        <select name="category" id="category" class="form-control">
+                                            <option value = "">-----------</option>
+                                            <% for(var i=0; i<categories.length; i++) {%>
+                                                <option value="<%= categories[i].categoryId_Category %>"><%= categories[i].categoryName_Category %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br><br>
+                            <button class="btn btn-secondary btn-right" type="reset">Clear</button>
+                            <button class="btn btn-primary btn-right" type="submit">Submit</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>   
+        </div> 
+        <a href="/administrator" class="topright2" style="color: #1d04fc">HOME</a>
+        <a href="/" class="topright" style="color: #1d04fc">LOGOUT</a> 
+    </body>
+</html>

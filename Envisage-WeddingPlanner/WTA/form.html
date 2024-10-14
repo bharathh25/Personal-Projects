@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservation form</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/form.css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css"/>
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/> -->
+</head>
+<body>
+​
+        <div class="main">    
+                      <!-- <nav>
+                         <ul>
+                            <li class="actives"><a href="index.html"><strong>Home</strong></a></li>
+                            <li><a href="#gallery"><strong>Gallery</strong></a></li>
+                            <li ><a href="#about"><strong>About</strong></a></li>
+                             <li><a href="#contact"><strong>Contact</strong></a></li>    
+                        
+                         </ul>
+                       </nav> -->
+            </div>
+        </header>
+        <!-- <h1>WEDDINGS VENUES EVENTS - REQUEST FOR PROPOSAL<h1>
+        <p>GET IN TOUCH WITH OUR WEDDING TEAM TO PLAN YOUR DREAM WEDDING</p> -->
+<div class="container-fluid">
+    <div class="row">
+             <div class="col-md-8">
+                 <h2> CONTACT  OUR  WEDDING PLANNER</h2>
+                 <p><em>*INDICATES REQUIRED FIELD</em></p>
+             </div>
+             <!-- <div class="col-md-4">
+                <h2 id="two">WEDDING ENQUIRIES</h2>
+                <p>Tel: (+250) 6877 8968 / 8121 / 3704<br>
+                    Email: weddingvenue@events.com</p>
+             </div>   -->
+         </div>
+         <br>
+<form id="form">
+    <div class="row">
+        <div class="col-md-4">
+             <label for="new-first-name">First Name</label>
+             <input type="text" class="form-control" placeholder="First name" id="firstName" required><br>
+        </div>  
+        <div class="col-md-4">
+             <label for="new-first-name">Last Name</label>
+             <input type="text" class="form-control" placeholder="Last name" id="lastName" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+             <label for="new-first-name">Mobile Phone</label>
+             <input type="text" class="form-control" placeholder="Phone" id="phone" required><br>
+        </div>  
+        <div class="col-md-4">
+              <label for="new-first-name">Country</label>
+              <input type="country" class="form-control" placeholder="Country" id="country" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+             <label for="new-first-name">Email</label>
+             <input type="email" class="form-control" placeholder="Email" id="email" required><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"> 
+             <h3>Event Details    </h3>
+             <p>Date Flexible:</p>  
+             <input type="radio" name="option" value="Yes" id="flexible"> Yes<br>
+             <input type="radio" name="option" value="No" id="flexible"> No<br>
+        </div>
+    </div> 
+    <br>
+    <div class="row">
+           <h3> Preffered Date:</h3>  
+         <div class="col-md-4"> 
+            <label for ="new-name3">Date:</label>
+            <input type="date"  id="date" class="form-control" required>
+         </div>
+    </div> 
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4">  
+             <label for ="new-name3">Event Type:</label>
+             <select name="month" id ="type" class="form-control" required>
+               <option >Please select</option>
+               <option value="Dowry" >Dowry</option>
+               <option >Reception</option>
+             </select>  
+        </div>
+        <div class="col-md-4">  
+                <label for ="new-name3">Number of Guests:</label>
+                <input type=number  id ="number" class="form-control" min="100" required>
+                           
+        </div>
+        <!-- <div class="col-md-4">  
+                <label for ="new-name3">Meal Period:</label>
+                <br>
+                <input type="checkbox" name="option" value="Lunch" id="meal">Lunch<br>
+                <input type="checkbox" name="option" value="Dinner" id="meal">Dinner<br>
+        </div> -->
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col-md-4">  
+            <label for ="new-name3">Preffered Venues:</label>
+            <select name="month" id ="preffered" class="form-control" required>
+                <option value="Heaven Garden Rebero">Heaven Garden Rebero(Big)</option>
+                <option value="Convention Wedding Hall">Convention Wedding Hall(Big)</option>
+                <option value="Arena Wedding Hall" >Arena Wedding Hall(Big)</option>
+                <option value="Serena Wedding Hall">Serena Wedding Hall(Big)</option>
+                <option value="Marriot Wedding Hall">Marriot Wedding Hal(Big)l</option>
+                <option value="Ituze Garden">Ituze Garden(Big)</option>
+                <option value="La palme wedding Hall">La palme wedding Hall(Big)</option>
+                <option value="Hill View wedding Hall">Hill View wedding Hall(Big)</option>
+                <option value="Greenwich wedding Hall">Greenwich wedding Hall(Big)</option>
+                
+            </select>  
+        </div>                
+    </div> 
+    <div class="row">
+        <div class="col-md-6"> 
+                <h3>How To Find You:</h3>  
+                <input type="radio" name="option" value="Email"> Email<br>
+               <input type="radio" name="option" value="Phone"> Phone<br>
+        </div>
+    </div> 
+    <br>
+    <div class="button">
+        
+           <button type="submit" id="btn" class="btn">CHECKOUT</button>
+     </div>
+     <br>
+     <br>           
+    </div>
+    <!-- <div class="row">
+            <div class="col-md-6">
+                    <h2>Your Book Order:</h2>
+                      <ul id="we"></ul>
+            
+            
+                <div id="show-order">
+                    <h2></h2>
+                    <p>First Name: <span class="firstName"></span></p>
+                    <p>Last Name: <span class="lastName"></span></p>
+                    <p>Phone: <span class="phone"></span></p>
+                    <p>Country: <span class="country"></span></p>
+                    <p>Email: <span class="email"></span></p>
+                    <p>Date Flexible: <span class="datef"></span></p>
+                    <p>Date:<span class="date"> </span></p>
+                    <p>Event Type:<span class="type"> </span></p>
+                    <p>Number of Guests:<span class="number"> </span></p>
+                   
+                    <p>Preffered Venues:<span class="preffered"> </span></p>
+                    <p>Price:<span class="price"> </span></p>
+                    <ul id="addresses">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="submit" id="btns" class="btn">Submit</a></button> -->
+   
+</form> 
+​
+    <!-- <footer>
+            <div class="footer">
+                <div class="row">
+                    <div class="col-md-6">
+                                <h4>Contact Us</h4>
+                                <ul>
+                                <li>Wedding Venues Phone: (+250) 6877 8968 / 8121 / 3704</li>
+                                <li>Heaven Garden Phone: +250788888820</li>
+                                <li>Convention Center Phone: +250788888810</li>
+                                <li>Marriot Hotel Phone: +250788888830</li>
+                                <li>Arena Phone: +250788888840</li>
+                                </ul>
+                    </div> -->
+            <div class="col-md-6">
+                    <h4>FOLLOW US</h4>
+                    <ol>
+                    <li> <a href="www.twitter.com" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="www.instagram.com" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="www.google.com" class="google"><i class="fa fa-google"></i></a></li>
+                    </ol>
+            </div>
+            <p class="copyright text-muted">&copy;Copyright Wedding Planner 2023</p>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+​
+</body>
+</html>
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedder</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">WEDDER</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="vendor.html">vendor</a>
+        <a href="clients.html">clients</a>
+        <a href="team.html">team</a>
+        <a href="contact.html">contact</a>
+        <a href="blog.html">blog</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- blog section starts  -->
+
+<section class="blog" id="blog">
+
+    <div class="heading">
+        <h1>our latest blogs</h1>
+        <img src="images/header-img.png" alt="">
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/blog-1.jpg" alt="">
+            <div class="info">
+                <h3> <span>01. </span> What are Experiential Weddings? How to plan one?</h3>
+                <p>What are Experiential Weddings? How to plan one? An ‘experiential wedding‘ can be done at the back of your home, in a small lawn, by the side of a river or lake, in a forest, or even in the midst of trees and other natural surroundings. The idea behind experiential weddings is that we can…</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/blog-2.jpg" alt="">
+            <div class="info">
+                <h3> <span>02. </span> How to plan your dream weddings during lockdown? </h3>
+                <p>HOW TO PLAN YOUR DREAM WEDDING DURING LOCKDOWN? Being wedding planners and a part of the wedding planning industry for over eight years, it is safe to say that the Corona pandemic is an unprecedented event in wedding planning history. Hotels shut down, travel plans restricted, airports shut down and big groups getting together, all…</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/blog-3.jpg" alt="">
+            <div class="info">
+                <h3> <span>03. </span> Transformational Decor </h3>
+                <p>We realized that making the reception completely different from the sangeet is going to be a major challenge. The venue needed a total revamp and major face-lift if it had to be totally transformed! From our design experience, we realized that the only effective way of doing this was by opting for gorgeous allover lighting. That is when we convinced our clients for a ‘Starry Night’s Theme’! We are talking of thousands of twinkling lights on the celing enveloping the entire space and giving a flickering glow. Now this is a wow-worthy look!</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+        
+
+    </div>
+
+</section>
+
+<!-- blog section ends-->
+
+<!-- footer section  -->
+
+<div class="footer"> Copyright &copy; <span>weder.com 2021</span> | all rights reserved! </div>
+
+
+
+
+<script> 
+
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('nav-toggle');
+});
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('nav-toggle');
+}
+
+</script>
+
+
+</body>
+</html>

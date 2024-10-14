@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           function validateForm() {
+                var a = document.forms["myform"]["category"].value;
+                var b = document.forms["myform"]["t_name"].value;
+                var c = document.forms["myform"]["task_desc"].value;
+               var d = document.forms["myform"]["endtime"].value;
+               // var e = document.forms["myform"]["addr"].value;
+               // var f = document.forms["myform"]["mob"].value;
+               // var g = document.forms["myform"]["email"].value;
+                if (a == "" || b == "" || c == "" || d == ""){// || e == "" || f == "" || g == "") 
+                    alert("Please check the details entered");
+                    return false;
+                }
+            }
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <title></title>
+        <style>
+        body{
+            background-image: url("../images/background1.jpg");
+            background-repeat: no-repeat;
+            background-size: 1400px 750px;
+        }
+        </style>
+    </head>
+    <body>
+        <h4 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;color: #000000;position: absolute; top: 15px; left: 40px">  <%= fullName %></h4>
+       
+        <div class="main container3" style="color: rgb(2, 2, 2);">
+            <div class="row">
+                <div class="col-8" style="margin: auto">
+                    <h1 class="display-4 m-b-2 admin_h1">Create Task</h1>
+                    <% if(err) {%>
+                        <script>alert("Please enter valid information");</script>
+                    <% } %>
+                    <form name = "myform" onsubmit="return validateForm()" method="POST" action="/create_task">
+                        <div class="col-half">
+                            <div class="form-group">  
+                                <div class="row">
+                                    <div class="wrapper1">
+                                        <label for="t_name">TASK NAME:</label>
+                                        <input id="t_name" type="text" placeholder="task name" name="t_name" class="form-control">
+                                    </div>
+                                </div>
+                            </div>                               
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper1">
+                                        <label for="descr">DESCRIPTION:</label>
+                                        <input id="descr" type="text"   placeholder="description" name="task_desc" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper1">
+                                        <label for="cat_name">CATEGORY NAME:</label><br>
+                                        <select name="category" id="category" class="form-control">
+                                            <option value = "">-----------</option>
+                                            <% for(var i=0; i<categories.length; i++) {%>
+                                                <option value="<%= categories[i].categoryId_Category %>"><%= categories[i].categoryName_Category %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="wrapper1">
+                                        <label for="endtime">END DATE (date and time):</label>
+                                        <input type="datetime-local" id="endtime" name="endtime">
+                                    </div>
+                                </div>
+                            </div> 
+                            <br><br>
+                            <div class="row">
+                                <button class="btn btn-secondary btn-right" style="margin-left: 10px" type="reset">Clear</button>
+                                <button class="btn btn-primary btn-right" style="margin-left: 10px" type="submit">Submit</button>
+                            </div>                        
+                        </div> 
+                    </form>
+                </div>
+            </div>   
+        </div> 
+        <% if(is_admin) {%>
+            <a href="./cat_admin" class="topright2" style="color: rgb(16, 98, 252);">HOME</a>
+        <% } else {%>
+            <a href="./user_login"  class="topright2" style="color: rgb(16, 98, 252);">HOME</a>
+        <% }%>
+            <a href="/" class="topright" style="color: rgb(16, 98, 252);">LOGOUT</a>
+    </body>
+</html>

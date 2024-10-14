@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style type="text/css"> 
+    
+        body{
+            background-image: url("./images/lo.webp");
+            background-size: 1600px 750px;
+        }  
+     </style>
+</head>
+
+<body>
+    <p style="font-size: 68px;text-align: center;font-family: brushscript; color: black;">USER</p>
+    
+    <div class = "container1">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="display-4 m-b-2" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color: #fffcfc; text-indent: 5px;">Login</h1>
+                <% if (err) { %>
+                    <p style = "color: #fffcfc"> <%= err %></p>
+                <% } %>
+                <form method="POST" action="/login">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="wrapper">
+                                <label for="username"><strong>Username:</strong></label>
+                                <input id="username" type="text" placeholder="username" name="username" class="form-control" size="10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="wrapper">        
+                                <label  for="pw"><strong>Password:</strong></label>
+                                <input id="pw" type="password" name="password" class="form-control" size="10">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" type="reset">Clear</button>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="/" class="topright" style="color: #1d04fc">BACK</a> 
+</body>
+
+
+</html>

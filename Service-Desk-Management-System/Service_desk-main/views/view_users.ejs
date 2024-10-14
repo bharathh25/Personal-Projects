@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style type="text/css">
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            background-color: #30039b;
+            text-emphasis-color: #dddddd;
+            color: #dddddd;
+        }
+        
+
+        tr:nth-child(odd) {
+            background-color: #bbe2fa !important;
+        }
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        body{
+            background-image: url("../images/back.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+
+    </style>
+    <script>
+        function deletefunction(id){
+            var hiddedUserId = document.getElementById("hiddenUserId");
+            hiddedUserId.value = id;
+            document.getElementById("myform").submit();
+        }
+    </script>
+
+</head>
+<body>
+    <h4 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 35px;color: rgb(0, 0, 0);position: absolute; top: 15px; left: 40px"> <%= fullName %></h4>
+
+    <div class="main">
+        <% if(users.length > 0)
+        {%>
+        <form id = "myform" method="POST">
+            <input id= "hiddenUserId" type="hidden" value="" name="hiddenUserId">
+            <table>
+                <tr>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Full Name</th>
+                    <th>Mob</th>
+                    <th>Email</th>
+                    <th>Place</th>
+                    <th>Cat ID</th>
+                    <th>Is Admin</th>
+                    <th>Password</th>
+                    <th>Delete</th>
+                </tr>
+                <% for(var i=0;i<users.length; i++)
+                {%>
+                    <tr>
+                        <td><%= users[i].usersId_Users %></td>
+                        <td><%= users[i].usersName_Users %></td>
+                        <td><%= users[i].fullName_Users %></td>
+                        <td><%= users[i].mobNo_Users %></td>
+                        <td><%= users[i].email_Users %></td>
+                        <td><%= users[i].address_Users  %></td>
+                        <td><%= users[i].categoryId_Users %></td>
+                        <td><%= users[i].isAdmin_Users %></td>
+                        <td><%= users[i].password_Users %></td>
+                        <td><button class="btn btn-primary" style="margin-left: 20px; margin-right: 5px;" onclick="deletefunction(this.id)" id= <%= users[i].usersId_Users %>>Delete</button>
+                    </tr>            
+                <%}
+            }%>
+            </table>
+        </form>     
+    </div>
+    <div class="row"> 
+        <a href="./administrator" class="topright2">HOME</a>
+        <a href="/" class="topright">LOGOUT</a>
+</div>     
+</body>

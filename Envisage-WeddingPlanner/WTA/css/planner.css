@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+#layout{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+#nav{
+    flex-basis: 20%;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    padding: 20px;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Philosopher', sans-serif;
+    color: white;
+}
+#sidebar{
+    flex-basis: 80%;
+    padding: 27px;
+    background-color: rgba(0,0,0,0.5);
+    border-bottom: 1px solid #aaa;
+    color: white;
+    font-family: 'Sen', sans-serif;
+    font-size: 15px;
+    
+}
+#content{
+    flex-basis: 50%;
+    margin: 0 25%;
+    
+}
+.inside{
+    padding: 20px;
+    /* background-color: rgba(0,0,0,0.5); */
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid #aaa;
+    color: white;
+   
+}
+#content a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    background-image: url("../image/kilimanjaro-studioz-1tgSROQC9hM-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+.back{
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Sen', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 787px){
+    #nav, #sidebar{
+        flex-basis: 100%;
+        border-right: none;
+    }
+}
+@media (max-width: 475px){
+    #sidebar{
+        display: none;
+    }
+}
